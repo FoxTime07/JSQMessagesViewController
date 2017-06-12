@@ -123,7 +123,8 @@
                                                              context:nil];
 		
 		CGRect s = [[[[JSQMessagesTimestampFormatter sharedFormatter] attributedTimestampForDate:[messageData date]] string] boundingRectWithSize:CGSizeMake(maximumTextWidth, CGFLOAT_MAX)
-																													  options:(NSStringDrawingUsesLineFragmentOrigin | NSStringDrawingUsesFontLeading)
+																													  options:(NSStringDrawingUsesLineFragmentOrigin |
+																															   NSStringDrawingUsesFontLeading)
 																												   attributes:@{ NSFontAttributeName : layout.messageBubbleFont }
 																													  context:nil];
 		
@@ -131,7 +132,7 @@
         CGSize stringSize = CGRectIntegral(stringRect).size;
 		CGSize ss = CGRectIntegral(s).size;
 		
-		ss.width = ss.width + avatarSize.width + 6.0f;
+		ss.width = ss.width + avatarSize.width - 12.0f;
 		
 		
 		CGSize use = stringSize.width >= ss.width ? stringSize : ss;
