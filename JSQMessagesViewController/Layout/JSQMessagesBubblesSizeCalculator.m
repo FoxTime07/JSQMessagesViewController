@@ -132,7 +132,7 @@
         CGSize stringSize = CGRectIntegral(stringRect).size;
 		CGSize ss = CGRectIntegral(s).size;
 		
-		ss.width = ss.width + avatarSize.width - 12.0f;
+		ss.width = ss.width + avatarSize.width - 24.0f;
 		
 		
 		CGSize use = stringSize.width >= ss.width ? stringSize : ss;

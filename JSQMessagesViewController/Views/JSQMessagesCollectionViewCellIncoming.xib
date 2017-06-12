@@ -41,7 +41,7 @@
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Da1-09-wR4" userLabel="Avatar container">
-                                <rect key="frame" x="6" y="74" width="34" height="34"/>
+                                <rect key="frame" x="12" y="74" width="34" height="34"/>
                                 <subviews>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="w23-sL-0Rh" userLabel="Avatar Image View">
                                         <rect key="frame" x="0.0" y="0.0" width="34" height="34"/>
@@ -58,7 +58,7 @@
                                 </constraints>
                             </view>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="cell top label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="afj-rd-iNv" userLabel="Cell top label" customClass="JSQMessagesLabel">
-                                <rect key="frame" x="46" y="81" width="198" height="20"/>
+                                <rect key="frame" x="52" y="81" width="192" height="20"/>
                                 <color key="backgroundColor" red="0.66666666666666663" green="0.66666666666666663" blue="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="20" id="fKS-MR-YPI"/>
@@ -71,7 +71,7 @@
                         <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstAttribute="trailing" secondItem="KYU-B8-cUW" secondAttribute="trailing" id="4qS-03-PFO"/>
-                            <constraint firstItem="Da1-09-wR4" firstAttribute="leading" secondItem="btS-p8-B7Z" secondAttribute="leading" constant="6" id="6ae-Sp-Q1U"/>
+                            <constraint firstItem="Da1-09-wR4" firstAttribute="leading" secondItem="btS-p8-B7Z" secondAttribute="leading" constant="12" id="6ae-Sp-Q1U"/>
                             <constraint firstAttribute="bottom" secondItem="Da1-09-wR4" secondAttribute="bottom" constant="6" id="8Fb-KA-tLB"/>
                             <constraint firstItem="afj-rd-iNv" firstAttribute="trailing" secondItem="btS-p8-B7Z" secondAttribute="trailing" id="AfA-oD-JlT"/>
                             <constraint firstAttribute="trailing" secondItem="OCS-Fu-acq" secondAttribute="trailing" id="TdB-8V-aUc"/>

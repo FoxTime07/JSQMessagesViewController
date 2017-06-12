@@ -41,7 +41,7 @@
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="X89-B1-aAd" userLabel="Avatar container">
-                                <rect key="frame" x="204" y="74" width="34" height="34"/>
+                                <rect key="frame" x="198" y="74" width="34" height="34"/>
                                 <subviews>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="y9b-D9-Q7W" userLabel="Avatar Image View">
                                         <rect key="frame" x="0.0" y="0.0" width="34" height="34"/>
@@ -58,7 +58,7 @@
                                 </constraints>
                             </view>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="cell top label" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jxM-YD-sVG" userLabel="Cell top label" customClass="JSQMessagesLabel">
-                                <rect key="frame" x="0.0" y="81" width="198" height="20"/>
+                                <rect key="frame" x="0.0" y="81" width="192" height="20"/>
                                 <color key="backgroundColor" red="0.66666666666666663" green="0.66666666666666663" blue="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="20" id="9oK-E7-iXA"/>
@@ -80,7 +80,7 @@
                             <constraint firstAttribute="trailing" secondItem="vLY-aM-0Dr" secondAttribute="trailing" constant="6" id="aVg-yy-8K7"/>
                             <constraint firstAttribute="bottom" secondItem="X89-B1-aAd" secondAttribute="bottom" constant="6" id="i8D-0k-YmF"/>
                             <constraint firstAttribute="width" constant="244" id="imD-52-K45"/>
-                            <constraint firstAttribute="trailing" secondItem="X89-B1-aAd" secondAttribute="trailing" constant="6" id="jfK-nP-LIQ"/>
+                            <constraint firstAttribute="trailing" secondItem="X89-B1-aAd" secondAttribute="trailing" constant="12" id="jfK-nP-LIQ"/>
                             <constraint firstItem="jxM-YD-sVG" firstAttribute="leading" secondItem="2zh-vR-QJW" secondAttribute="leading" id="kZo-rS-L4k"/>
                             <constraint firstAttribute="bottom" secondItem="2qm-c6-OZf" secondAttribute="bottom" id="lts-Ve-wSh"/>
                             <constraint firstItem="X89-B1-aAd" firstAttribute="leading" secondItem="jxM-YD-sVG" secondAttribute="trailing" constant="6" id="uXQ-jz-YBM"/>
