@@ -22,6 +22,7 @@
 #import "JSQMessagesCollectionViewDataSource.h"
 #import "JSQMessagesCollectionViewFlowLayout.h"
 #import "JSQMessageData.h"
+#import "JSQMessagesTimestampFormatter.h"
 
 #import "UIImage+JSQMessages.h"
 
@@ -120,8 +121,20 @@
                                                              options:(NSStringDrawingUsesLineFragmentOrigin | NSStringDrawingUsesFontLeading)
                                                           attributes:@{ NSFontAttributeName : layout.messageBubbleFont }
                                                              context:nil];
+		
+		CGRect s = [[[[JSQMessagesTimestampFormatter sharedFormatter] attributedTimestampForDate:[messageData date]] string] boundingRectWithSize:CGSizeMake(maximumTextWidth, CGFLOAT_MAX)
+																													  options:(NSStringDrawingUsesLineFragmentOrigin | NSStringDrawingUsesFontLeading)
+																												   attributes:@{ NSFontAttributeName : layout.messageBubbleFont }
+																													  context:nil];
+		
 
         CGSize stringSize = CGRectIntegral(stringRect).size;
+		CGSize ss = CGRectIntegral(s).size;
+		
+		ss.width = ss.width + avatarSize.width + 6.0f;
+		
+		
+		CGSize use = stringSize.width >= ss.width ? stringSize : ss;
 
         CGFloat verticalContainerInsets = layout.messageBubbleTextViewTextContainerInsets.top + layout.messageBubbleTextViewTextContainerInsets.bottom;
         CGFloat verticalFrameInsets = layout.messageBubbleTextViewFrameInsets.top + layout.messageBubbleTextViewFrameInsets.bottom;
@@ -134,9 +147,9 @@
 
         //  same as above, an extra 2 points of magix
 //		CGFloat finalWidth = MAX(stringSize.width + horizontalInsetsTotal, self.minimumBubbleWidth) + self.additionalInset;
-		CGFloat finalWidth = MAX(stringSize.width + width, self.minimumBubbleWidth) + self.additionalInset;
+		CGFloat finalWidth = MAX(use.width + width, self.minimumBubbleWidth) + self.additionalInset;
 
-        finalSize = CGSizeMake(finalWidth, stringSize.height + verticalInsets);
+        finalSize = CGSizeMake(finalWidth, use.height + verticalInsets);
     }
 
     [self.cache setObject:[NSValue valueWithCGSize:finalSize] forKey:@([messageData messageHash])];
