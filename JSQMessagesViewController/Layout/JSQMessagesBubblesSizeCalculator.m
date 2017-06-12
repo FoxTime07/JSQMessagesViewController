@@ -128,10 +128,13 @@
 
         //  add extra 2 points of space (`self.additionalInset`), because `boundingRectWithSize:` is slightly off
         //  not sure why. magix. (shrug) if you know, submit a PR
-        CGFloat verticalInsets = verticalContainerInsets + verticalFrameInsets + self.additionalInset;
+		CGFloat verticalInsets = verticalContainerInsets + verticalFrameInsets + self.additionalInset + 12.0f + avatarSize.height;
+		
+		CGFloat width = horizontalContainerInsets + horizontalFrameInsets;
 
         //  same as above, an extra 2 points of magix
-        CGFloat finalWidth = MAX(stringSize.width + horizontalInsetsTotal, self.minimumBubbleWidth) + self.additionalInset;
+//		CGFloat finalWidth = MAX(stringSize.width + horizontalInsetsTotal, self.minimumBubbleWidth) + self.additionalInset;
+		CGFloat finalWidth = MAX(stringSize.width + width, self.minimumBubbleWidth) + self.additionalInset;
 
         finalSize = CGSizeMake(finalWidth, stringSize.height + verticalInsets);
     }
